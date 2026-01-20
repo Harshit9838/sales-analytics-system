@@ -1,0 +1,5 @@
+SALES ANALYTICS REPORT
+=====================
+
+Total Revenue: 3527808.0
+Total Transactions: 70
