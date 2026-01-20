@@ -29,3 +29,14 @@ def enrich_sales_data(transactions, mapping):
         enriched.append(t)
 
     return enriched
+
+def save_enriched_data(transactions, filename):
+    if not transactions:
+        return
+
+    with open(filename, "w", encoding="utf-8") as file:
+        headers = transactions[0].keys()
+        file.write("|".join(headers) + "\n")
+
+        for t in transactions:
+            file.write("|".join(str(t[h]) for h in headers) + "\n")
